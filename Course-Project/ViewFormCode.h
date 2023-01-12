@@ -42,14 +42,26 @@ __published:	// IDE-managed Components
 	TMenuItem *ViewModeOption;
 	TTimer *ViewToolbarTimer;
 	TDBGrid *ViewDBGrid;
-	TLabel *Dev;
+	TGroupBox *GroupBox_find_sort;
+	TEdit *FindEdit;
+	TButton *FindButton;
+	TComboBox *ComboBox_sort;
+	TRadioButton *RadioButton_up;
+	TRadioButton *RadioButton_down;
+	TButton *Button_Sort;
 	void __fastcall ButtonUPDClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
-	void __fastcall ButtonExitClick(TObject *Sender);
 	void __fastcall ExitOptionClick(TObject *Sender);
 	void __fastcall ViewModeOptionClick(TObject *Sender);
 	void __fastcall EditModeOptionClick(TObject *Sender);
+	void __fastcall FindButtonClick(TObject *Sender);
+	void __fastcall Button_SortClick(TObject *Sender);
+	void __fastcall RadioButton_upClick(TObject *Sender);
+	void __fastcall RadioButton_downClick(TObject *Sender);
+	void __fastcall ComboBox_sortSelect(TObject *Sender);
 private:	// User declarations
+	String Column = "¹";
+	String Order = "asc";
 public:		// User declarations
 	__fastcall TViewMode(TComponent* Owner);
 };

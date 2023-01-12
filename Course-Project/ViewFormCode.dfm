@@ -16,23 +16,6 @@ object ViewMode: TViewMode
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object Dev: TLabel
-    Left = 963
-    Top = 593
-    Width = 140
-    Height = 13
-    Align = alCustom
-    Alignment = taCenter
-    Caption = 'Made by NordStar - 2022'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold, fsUnderline]
-    Font.Quality = fqProof
-    ParentFont = False
-    Transparent = True
-  end
   object DBNavigator1: TDBNavigator
     Left = 8
     Top = 418
@@ -57,7 +40,6 @@ object ViewMode: TViewMode
       item
         Width = 50
       end>
-    ExplicitTop = 629
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -106,6 +88,80 @@ object ViewMode: TViewMode
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
   end
+  object GroupBox_find_sort: TGroupBox
+    Left = 231
+    Top = 449
+    Width = 314
+    Height = 157
+    Caption = #1055#1086#1080#1089#1082' '#1080' '#1089#1086#1088#1090#1080#1088#1086#1074#1082#1072
+    TabOrder = 4
+    object FindEdit: TEdit
+      Left = 3
+      Top = 16
+      Width = 150
+      Height = 21
+      TabOrder = 0
+      TextHint = 'Team Name'
+    end
+    object FindButton: TButton
+      Left = 159
+      Top = 16
+      Width = 152
+      Height = 25
+      Caption = #1055#1086#1080#1089#1082
+      TabOrder = 1
+      OnClick = FindButtonClick
+    end
+    object ComboBox_sort: TComboBox
+      Left = 75
+      Top = 63
+      Width = 150
+      Height = 21
+      ItemIndex = 0
+      TabOrder = 2
+      Text = #1053#1086#1084#1077#1088
+      OnSelect = ComboBox_sortSelect
+      Items.Strings = (
+        #1053#1086#1084#1077#1088
+        #1050#1086#1084#1072#1085#1076#1072
+        #1058#1088#1077#1085#1077#1088
+        #1044#1072#1090#1072' '#1089#1086#1079#1076#1072#1072#1085#1080#1103
+        #1058#1091#1088#1085#1080#1088
+        #1043#1086#1088#1086#1076)
+    end
+    object RadioButton_up: TRadioButton
+      Left = 111
+      Top = 90
+      Width = 30
+      Height = 17
+      Caption = #9650
+      Checked = True
+      TabOrder = 3
+      TabStop = True
+      OnClick = RadioButton_upClick
+    end
+    object RadioButton_down: TRadioButton
+      Left = 159
+      Top = 90
+      Width = 25
+      Height = 17
+      Caption = #9660
+      TabOrder = 4
+      OnClick = RadioButton_downClick
+    end
+    object Button_Sort: TButton
+      Left = 2
+      Top = 120
+      Width = 310
+      Height = 35
+      Align = alBottom
+      Caption = #1057#1086#1088#1090#1080#1088#1086#1074#1082#1072
+      TabOrder = 5
+      OnClick = Button_SortClick
+      ExplicitLeft = 0
+      ExplicitTop = 119
+    end
+  end
   object ViewDataSource: TDataSource
     DataSet = ViewADOTable
     Left = 1056
@@ -114,8 +170,9 @@ object ViewMode: TViewMode
   object ViewADOTable: TADOTable
     Active = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=H:\'#1050#1091#1088#1089#1072#1095'\'#1064#1087#1086#1088#1072'\CW_' +
-      'DB_2003.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\WS\WSproj\Course' +
+      '-Work\Course-Project\CW_DB_2003.mdb;Mode=ReadWrite|Share Deny No' +
+      'ne;Persist Security Info=False'
     CursorType = ctStatic
     TableName = 'Main_data'
     Left = 1056
@@ -152,8 +209,9 @@ object ViewMode: TViewMode
   end
   object ViewADOQuery: TADOQuery
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=H:\'#1050#1091#1088#1089#1072#1095'\'#1064#1087#1086#1088#1072'\CW_' +
-      'DB_2003.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\WS\WSproj\Course' +
+      '-Work\Course-Project\CW_DB_2003.mdb;Mode=ReadWrite|Share Deny No' +
+      'ne;Persist Security Info=False'
     Parameters = <>
     Left = 1056
     Top = 112

@@ -26,36 +26,6 @@ object PasswordModal: TPasswordModal
     Font.Style = []
     ParentFont = False
   end
-  object Label2: TLabel
-    Left = 181
-    Top = 0
-    Width = 52
-    Height = 16
-    Caption = '(248531)'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Dev: TLabel
-    Left = 93
-    Top = 117
-    Width = 140
-    Height = 13
-    Align = alCustom
-    Alignment = taCenter
-    Caption = 'Made by NordStar - 2022'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold, fsUnderline]
-    Font.Quality = fqProof
-    ParentFont = False
-    Transparent = True
-  end
   object PwdEdit: TEdit
     Left = 8
     Top = 37

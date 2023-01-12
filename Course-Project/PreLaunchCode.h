@@ -16,7 +16,6 @@ __published:	// IDE-managed Components
 	TButton *EditModeButton;
 	TButton *Exit;
 	TButton *ViewModeButton;
-	TLabel *Dev;
 	void __fastcall ExitClick(TObject *Sender);
 	void __fastcall PreCheckButtonClick(TObject *Sender);
 	void __fastcall ViewModeButtonClick(TObject *Sender);

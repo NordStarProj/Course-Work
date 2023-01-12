@@ -19,26 +19,16 @@
 class TEditMode : public TForm
 {
 __published:	// IDE-managed Components
-	TADOQuery *ViewADOQuery;
-	TADOTable *ViewADOTable;
-	TAutoIncField *ViewADOTableAutoIncField;
-	TWideStringField *ViewADOTableTeam;
-	TWideStringField *ViewADOTableTrainer;
-	TDateTimeField *ViewADOTableCreatedAt;
-	TWideStringField *ViewADOTableTournament;
-	TWideStringField *ViewADOTableLocation;
-	TDataSource *ViewDataSource;
 	TDBNavigator *ViewDBNavigator;
-	TMainMenu *EditModeMenu;
+	TDBGrid *ViewDBGrid;
+	TStatusBar *StatusBar1;
+	TTimer *ViewToolbarTimer;
+	TMainMenu *ViewModeMenu;
 	TMenuItem *File1;
 	TMenuItem *ExitOption;
 	TMenuItem *Mode1;
-	TMenuItem *EditModeOptionDSB;
-	TMenuItem *ViewModeOptionENB;
-	TTimer *ViewToolbarTimer;
-	TDBGrid *ViewDBGrid;
-	TStatusBar *StatusBar1;
-	TLabel *Dev;
+	TMenuItem *EditModeOption;
+	TMenuItem *ViewModeOption;
 	void __fastcall ViewModeOptionENBClick(TObject *Sender);
 	void __fastcall ExitOptionClick(TObject *Sender);
 private:	// User declarations

@@ -15,8 +15,6 @@ __published:	// IDE-managed Components
 	TLabel *Label1;
 	TButton *SubmitButton;
 	TButton *ReturnButton;
-	TLabel *Label2;
-	TLabel *Dev;
 	void __fastcall ReturnButtonClick(TObject *Sender);
 	void __fastcall SubmitButtonClick(TObject *Sender);
 private:	// User declarations

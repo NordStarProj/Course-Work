@@ -43,11 +43,6 @@ void __fastcall TViewMode::FormCreate(TObject *Sender)
 
 }
 //---------------------------------------------------------------------------
-void __fastcall TViewMode::ButtonExitClick(TObject *Sender)
-{
-Application->Terminate();
-}
-//---------------------------------------------------------------------------
 void __fastcall TViewMode::ExitOptionClick(TObject *Sender)
 {
 Application->Terminate();
@@ -69,3 +64,92 @@ f->ShowModal();
 Application->Terminate();
 }
 //---------------------------------------------------------------------------
+void __fastcall TViewMode::FindButtonClick(TObject *Sender)
+{
+	if (FindEdit->Text != "") {
+	  ViewADOTable->Active = false;
+	  ViewADOQuery->Active = false;
+	  ViewADOQuery->SQL->Clear();
+
+      AnsiString s =
+		"SELECT * FROM Main_Data WHERE Team = '" + FindEdit->Text + "'";
+
+	  ViewADOQuery->SQL->Add(s);
+	  ViewADOQuery->Open();
+	  ViewDataSource->DataSet = ViewADOQuery;
+	  ViewDBGrid->Columns->RebuildColumns();
+
+	}
+	else {
+		MessageDlg("Enter a Team Name.", mtError, TMsgDlgButtons() << mbOK, 0);
+	}
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TViewMode::Button_SortClick(TObject *Sender)
+{
+	ViewADOTable->Active = false;
+	ViewADOQuery->Active = false;
+	ViewADOQuery->SQL->Clear();
+
+	AnsiString s = "select * from Main_Data order by " + Column + " " + Order;
+
+	ViewADOQuery->SQL->Add(s);
+	ViewADOQuery->Open();
+	ViewDataSource->DataSet = ViewADOQuery;
+	ViewDBGrid->Columns->RebuildColumns();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TViewMode::RadioButton_downClick(TObject *Sender)
+{
+	Order = "desc";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TViewMode::RadioButton_upClick(TObject *Sender)
+{
+  Order = "asc";
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TViewMode::ComboBox_sortSelect(TObject *Sender)
+{
+  switch(ComboBox_sort->ItemIndex)
+  {
+    case 0:
+    {
+	  Column = "¹";
+      break;
+	}
+    case 1:
+    {
+	  Column = "team";
+      break;
+	}
+    case 2:
+    {
+	  Column = "Trainer";
+      break;
+	}
+    case 3:
+    {
+	  Column = "CreatedAt";
+      break;
+	}
+    case 4:
+    {
+	  Column = "Tournament";
+      break;
+	}
+    case 5: {
+	  Column = "Location";
+	  break;
+	}
+    }
+}
+//---------------------------------------------------------------------------
+
+
