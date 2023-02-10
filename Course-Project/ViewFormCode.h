@@ -21,7 +21,6 @@ class TViewMode : public TForm
 {
 __published:	// IDE-managed Components
 	TDBNavigator *DBNavigator1;
-	TStatusBar *StatusBar1;
 	TGroupBox *GroupBox1;
 	TCheckListBox *ViewCheckListBox;
 	TButton *ButtonUPD;
@@ -40,7 +39,6 @@ __published:	// IDE-managed Components
 	TMenuItem *Mode1;
 	TMenuItem *EditModeOption;
 	TMenuItem *ViewModeOption;
-	TTimer *ViewToolbarTimer;
 	TDBGrid *ViewDBGrid;
 	TGroupBox *GroupBox_find_sort;
 	TEdit *FindEdit;
@@ -52,7 +50,6 @@ __published:	// IDE-managed Components
 	void __fastcall ButtonUPDClick(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall ExitOptionClick(TObject *Sender);
-	void __fastcall ViewModeOptionClick(TObject *Sender);
 	void __fastcall EditModeOptionClick(TObject *Sender);
 	void __fastcall FindButtonClick(TObject *Sender);
 	void __fastcall Button_SortClick(TObject *Sender);

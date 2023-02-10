@@ -48,14 +48,6 @@ void __fastcall TViewMode::ExitOptionClick(TObject *Sender)
 Application->Terminate();
 }
 //---------------------------------------------------------------------------
-void __fastcall TViewMode::ViewModeOptionClick(TObject *Sender)
-{
-this->Hide();
-TViewMode *f = new TViewMode(Application);
-f->ShowModal();
-Application->Terminate();
-}
-//---------------------------------------------------------------------------
 void __fastcall TViewMode::EditModeOptionClick(TObject *Sender)
 {
 this->Hide();
@@ -81,7 +73,7 @@ void __fastcall TViewMode::FindButtonClick(TObject *Sender)
 
 	}
 	else {
-		MessageDlg("Enter a Team Name.", mtError, TMsgDlgButtons() << mbOK, 0);
+		MessageDlg("Enter a valid Team Name.", mtError, TMsgDlgButtons() << mbOK, 0);
 	}
 
 }

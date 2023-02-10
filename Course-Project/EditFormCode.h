@@ -29,8 +29,8 @@ __published:	// IDE-managed Components
 	TMenuItem *Mode1;
 	TMenuItem *EditModeOption;
 	TMenuItem *ViewModeOption;
-	void __fastcall ViewModeOptionENBClick(TObject *Sender);
 	void __fastcall ExitOptionClick(TObject *Sender);
+	void __fastcall ViewModeOptionClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TEditMode(TComponent* Owner);

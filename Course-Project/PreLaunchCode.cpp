@@ -24,7 +24,7 @@ Application->Terminate();
 //---------------------------------------------------------------------------
 void __fastcall TPreLaunchForm::PreCheckButtonClick(TObject *Sender)
 {
-fstream f("F://WS//WSproj//Course-Work//Course-Project//CW_DB_2003.mdb", ios::binary | ios::in);
+fstream f("D:\\WebStorm\\WSproj\\Cris-lavka-bot\\Course-Work\\Course-Project\\CW_DB_2003.mdb", ios::binary | ios::in);
  if (f == 0) {
 	ShowMessage("BD file not found! Check Directory!");
  } else {

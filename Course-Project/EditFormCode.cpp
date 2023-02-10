@@ -15,16 +15,18 @@ __fastcall TEditMode::TEditMode(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-void __fastcall TEditMode::ViewModeOptionENBClick(TObject *Sender)
+void __fastcall TEditMode::ExitOptionClick(TObject *Sender)
 {
+Application->Terminate();
+}
+//---------------------------------------------------------------------------
+void __fastcall TEditMode::ViewModeOptionClick(TObject *Sender)
+{
+
 this->Hide();
 TViewMode *f = new TViewMode(Application);
 f->ShowModal();
 Application->Terminate();
 }
 //---------------------------------------------------------------------------
-void __fastcall TEditMode::ExitOptionClick(TObject *Sender)
-{
-Application->Terminate();
-}
-//---------------------------------------------------------------------------
+

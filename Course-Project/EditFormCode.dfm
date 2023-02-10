@@ -74,6 +74,7 @@ object EditMode: TEditMode
       end
       object ViewModeOption: TMenuItem
         Caption = 'View mode'
+        OnClick = ViewModeOptionClick
       end
     end
   end

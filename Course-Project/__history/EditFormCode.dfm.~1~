@@ -1,0 +1,80 @@
+object EditMode: TEditMode
+  Left = 0
+  Top = 0
+  Caption = #1048#1085#1092#1086#1088#1084#1072#1094#1080#1086#1085#1085#1072#1103' '#1089#1080#1089#1090#1077#1084#1072' [EditMode]'
+  ClientHeight = 595
+  ClientWidth = 1114
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = ViewModeMenu
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ViewDBNavigator: TDBNavigator
+    Left = 32
+    Top = 545
+    Width = 1040
+    Height = 25
+    DataSource = ViewMode.ViewDataSource
+    TabOrder = 0
+  end
+  object ViewDBGrid: TDBGrid
+    Left = 8
+    Top = 8
+    Width = 1098
+    Height = 531
+    DataSource = ViewMode.ViewDataSource
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 576
+    Width = 1114
+    Height = 19
+    Panels = <
+      item
+        Width = 100
+      end
+      item
+        Width = 100
+      end
+      item
+        Width = 50
+      end>
+  end
+  object ViewToolbarTimer: TTimer
+    Left = 1040
+    Top = 488
+  end
+  object ViewModeMenu: TMainMenu
+    Left = 1056
+    Top = 160
+    object File1: TMenuItem
+      Caption = 'File'
+      object ExitOption: TMenuItem
+        Caption = 'Exit'
+        OnClick = ExitOptionClick
+      end
+    end
+    object Mode1: TMenuItem
+      Caption = 'Mode'
+      object EditModeOption: TMenuItem
+        Caption = 'Edit mode'
+        Checked = True
+        Enabled = False
+      end
+      object ViewModeOption: TMenuItem
+        Caption = 'View mode'
+      end
+    end
+  end
+end

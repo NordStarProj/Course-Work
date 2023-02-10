@@ -25,29 +25,13 @@ object ViewMode: TViewMode
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
     TabOrder = 0
   end
-  object StatusBar1: TStatusBar
-    Left = 0
-    Top = 612
-    Width = 1111
-    Height = 19
-    Panels = <
-      item
-        Width = 100
-      end
-      item
-        Width = 100
-      end
-      item
-        Width = 50
-      end>
-  end
   object GroupBox1: TGroupBox
     Left = 8
     Top = 449
     Width = 217
     Height = 157
     Caption = #1042#1099#1073#1077#1088#1080#1090#1077' '#1101#1083#1077#1084#1077#1085#1090#1099' '#1076#1083#1103' '#1086#1090#1086#1073#1088#1072#1078#1077#1085#1080#1103
-    TabOrder = 2
+    TabOrder = 1
     object ViewCheckListBox: TCheckListBox
       Left = 3
       Top = 17
@@ -81,7 +65,7 @@ object ViewMode: TViewMode
     DataSource = ViewDataSource
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
-    TabOrder = 3
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -94,7 +78,7 @@ object ViewMode: TViewMode
     Width = 314
     Height = 157
     Caption = #1055#1086#1080#1089#1082' '#1080' '#1089#1086#1088#1090#1080#1088#1086#1074#1082#1072
-    TabOrder = 4
+    TabOrder = 3
     object FindEdit: TEdit
       Left = 3
       Top = 16
@@ -158,8 +142,6 @@ object ViewMode: TViewMode
       Caption = #1057#1086#1088#1090#1080#1088#1086#1074#1082#1072
       TabOrder = 5
       OnClick = Button_SortClick
-      ExplicitLeft = 0
-      ExplicitTop = 119
     end
   end
   object ViewDataSource: TDataSource
@@ -170,9 +152,9 @@ object ViewMode: TViewMode
   object ViewADOTable: TADOTable
     Active = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\WS\WSproj\Course' +
-      '-Work\Course-Project\CW_DB_2003.mdb;Mode=ReadWrite|Share Deny No' +
-      'ne;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\WebStorm\WSproj\' +
+      'Cris-lavka-bot\Course-Work\Course-Project\CW_DB_2003.mdb;Mode=Re' +
+      'adWrite|Share Deny None;Persist Security Info=False'
     CursorType = ctStatic
     TableName = 'Main_data'
     Left = 1056
@@ -209,9 +191,9 @@ object ViewMode: TViewMode
   end
   object ViewADOQuery: TADOQuery
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\WS\WSproj\Course' +
-      '-Work\Course-Project\CW_DB_2003.mdb;Mode=ReadWrite|Share Deny No' +
-      'ne;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\WebStorm\WSproj\' +
+      'Cris-lavka-bot\Course-Work\Course-Project\CW_DB_2003.mdb;Mode=Re' +
+      'adWrite|Share Deny None;Persist Security Info=False'
     Parameters = <>
     Left = 1056
     Top = 112
@@ -236,12 +218,7 @@ object ViewMode: TViewMode
         Caption = 'View mode'
         Checked = True
         Enabled = False
-        OnClick = ViewModeOptionClick
       end
     end
-  end
-  object ViewToolbarTimer: TTimer
-    Left = 1056
-    Top = 208
   end
 end

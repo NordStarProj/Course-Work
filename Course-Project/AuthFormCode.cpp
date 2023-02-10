@@ -27,13 +27,13 @@ Application->Terminate();
 void __fastcall TPasswordModal::SubmitButtonClick(TObject *Sender)
 {
 if (PwdEdit->Text == "248531") {
-	ShowMessage("Password Accepted.");
+	MessageDlg("Password accepted.", mtInformation, TMsgDlgButtons() << mbOK, 0);
 	this->Hide();
 	TEditMode *f = new TEditMode(Application);
 	f->ShowModal();
 	Application->Terminate();
 } else {
-	ShowMessage("Wrong Password.\nAsk a system administrator for a permission to edit.");
+	MessageDlg("Wrong Password.\nAsk a system administrator for a permission to edit.", mtError, TMsgDlgButtons() << mbOK, 0);
 }
 }
 //---------------------------------------------------------------------------
